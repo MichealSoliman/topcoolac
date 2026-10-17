@@ -1,0 +1,170 @@
+# =========================================================
+# Top Cool - .htaccess
+# =========================================================
+
+Options -Indexes
+ServerSignature Off
+
+RewriteEngine On
+
+# =========================================================
+# Force HTTPS
+# =========================================================
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# =========================================================
+# Force Non-WWW
+# إذا كنت تستخدم www اعكس القاعدة
+# =========================================================
+
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# =========================================================
+# Remove index.html
+# =========================================================
+
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+# =========================================================
+# Remove .html from URL
+# =========================================================
+
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# =========================================================
+# Internally load .html
+# =========================================================
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/.]+)/?$ $1.html [L]
+
+DirectoryIndex index.html
+
+# =========================================================
+# Custom Error Pages
+# =========================================================
+
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# =========================================================
+# Disable ETags
+# =========================================================
+
+FileETag None
+
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+
+# =========================================================
+# GZIP Compression
+# =========================================================
+
+<IfModule mod_deflate.c>
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE image/svg+xml
+
+</IfModule>
+
+# =========================================================
+# Browser Cache
+# =========================================================
+
+<IfModule mod_expires.c>
+
+ExpiresActive On
+
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+
+ExpiresByType font/woff "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+
+ExpiresDefault "access plus 7 days"
+
+</IfModule>
+
+# =========================================================
+# Cache Headers
+# =========================================================
+
+<IfModule mod_headers.c>
+
+<FilesMatch "\.(css|js)$">
+Header set Cache-Control "public,max-age=2592000"
+</FilesMatch>
+
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|ico)$">
+Header set Cache-Control "public,max-age=31536000,immutable"
+</FilesMatch>
+
+<FilesMatch "\.(woff|woff2|ttf|otf)$">
+Header set Cache-Control "public,max-age=31536000,immutable"
+</FilesMatch>
+
+</IfModule>
+
+# =========================================================
+# CORS Fonts
+# =========================================================
+
+<IfModule mod_headers.c>
+
+<FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2)$">
+Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+</IfModule>
+
+# =========================================================
+# Protect Sensitive Files
+# =========================================================
+
+<FilesMatch "^(\.htaccess|\.htpasswd|robots\.txt)$">
+Require all granted
+</FilesMatch>
+
+<FilesMatch "^\.(env|git)">
+Require all denied
+</FilesMatch>
+
+# =========================================================
+# Disable TRACE
+# =========================================================
+
+TraceEnable Off
+
+# =========================================================
+# MIME Types
+# =========================================================
+
+AddType image/webp .webp
+AddType image/avif .avif
+
+# =========================================================
+# UTF-8
+# =========================================================
+
+AddDefaultCharset UTF-8
