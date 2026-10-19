@@ -140,5 +140,17 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://topcoolac.com/blog/ac-water-leak-causes/</loc>
+        <lastmod>2026-10-19T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://topcoolac.com/blog/ac-not-cooling-causes/</loc>
+        <lastmod>2026-10-19T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
 </urlset>

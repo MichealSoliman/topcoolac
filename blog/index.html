@@ -9,15 +9,15 @@
     <title>مدونة توب كول للمكيفات | نصائح وإرشادات صيانة وتنظيف المكيفات بجدة</title>
 
     <meta name="description"
-        content="مدونة توب كول - دليلك الشامل لنصائح صيانة، تنظيف، وفك وتركيب المكيفات بجدة. تعرّف على كيفية المحافظة على كفاءة تبريد المكيف وإطالة عمره الافتراضي.">
+        content="مدونة توب كول - دليلك الشامل لنصائح صيانة، تنظيف، وفك وتركيب المكيفات بجدة. تعرّف على كيفية معالجة تسريب الماء، وأسباب ضعف التبريد، واختيار أفضل مواسير النحاس.">
     <meta name="keywords"
-        content="مدونة توب كول, نصائح صيانة مكيفات, تنظيف مكيفات بجدة, صيانة مكيف سبليت, كيفية تنظيف المكيف, مشاكل المكيفات, توب كول للمكيفات">
+        content="مدونة توب كول, نصائح صيانة مكيفات, تنظيف مكيفات بجدة, صيانة مكيف سبليت, تسريب ماء المكيف, المكيف لا يبرد, مواسير النحاس, توب كول للمكيفات">
 
     <link rel="canonical" href="https://topcoolac.com/blog/" />
-
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="مدونة توب كول للمكيفات | نصائح وإرشادات التكييف">
+    <!-- Open Graph -->
+    <meta property="og:title" content="مدونة توب كول للمكيفات | نصائح وإرشادات التكييف بجدة">
     <meta property="og:description"
         content="دليلك الشامل لنصائح صيانة وتنظيف وفك وتركيب المكيفات بجدة من خبراء توب كول.">
     <meta property="og:image" content="https://topcoolac.com/assets/img/logo.webp">
@@ -31,6 +31,16 @@
     <meta name="language" content="Arabic">
     <meta name="theme-color" content="#0f1828">
     <meta name="format-detection" content="telephone=yes">
+
+    <!-- Google Fonts & Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/dist/output.css">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -69,11 +79,17 @@
         }
     </script>
 
-    <link rel="stylesheet" href="/dist/output.css">
     <style>
         body {
             font-family: 'Tajawal', sans-serif;
             scroll-behavior: smooth;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 700;
         }
 
         .hero-pattern {
@@ -108,17 +124,44 @@
             color: #f59e0b;
         }
 
-        /* Card Hover */
+        /* Modern Blog Card Hover */
         .blog-card {
-            transition: all 0.3s ease;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-7px);
+            box-shadow: 0 20px 30px -10px rgba(15, 24, 40, 0.12);
         }
 
-        /* Footer styling matches others */
+        .blog-card:hover .icon-box {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        .icon-box {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Card Header & Icon Color Accents */
+        .card-header-clean { background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(6, 182, 212, 0.08) 100%); border-bottom: 1px solid rgba(20, 184, 166, 0.15); }
+        .card-icon-clean { color: #0d9488; border-color: rgba(20, 184, 166, 0.25); }
+        
+        .card-header-cooling { background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(14, 165, 233, 0.08) 100%); border-bottom: 1px solid rgba(37, 99, 235, 0.15); }
+        .card-icon-cooling { color: #2563eb; border-color: rgba(37, 99, 235, 0.25); }
+        
+        .card-header-leak { background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(59, 130, 246, 0.08) 100%); border-bottom: 1px solid rgba(6, 182, 212, 0.15); }
+        .card-icon-leak { color: #0891b2; border-color: rgba(6, 182, 212, 0.25); }
+        
+        .card-header-copper { background: linear-gradient(135deg, rgba(217, 119, 6, 0.1) 0%, rgba(245, 158, 11, 0.08) 100%); border-bottom: 1px solid rgba(217, 119, 6, 0.15); }
+        .card-icon-copper { color: #d97706; border-color: rgba(217, 119, 6, 0.25); }
+        
+        .card-header-compare { background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.08) 100%); border-bottom: 1px solid rgba(99, 102, 241, 0.15); }
+        .card-icon-compare { color: #4f46e5; border-color: rgba(99, 102, 241, 0.25); }
+        
+        .card-header-filter { background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(20, 184, 166, 0.08) 100%); border-bottom: 1px solid rgba(16, 185, 129, 0.15); }
+        .card-icon-filter { color: #059669; border-color: rgba(16, 185, 129, 0.25); }
+
+        /* Footer styling */
         .footer-link {
             display: flex;
             align-items: center;
@@ -146,16 +189,6 @@
             flex-shrink: 0;
         }
 
-        .payment-method {
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
         .security-badge {
             display: flex;
             align-items: center;
@@ -166,17 +199,16 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
-    <link rel="stylesheet" href="/assets/css/all.min.css">
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-800">
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white shadow-md">
         <div class="container mx-auto px-4 flex items-center justify-between">
             <a href="/" class="flex items-center space-x-reverse space-x-4">
                 <div
                     class="text-white p-3 rounded-lg w-16 h-16 flex items-center justify-center shadow-md rounded-full bg-primary">
-                    <img src="/assets/img/logo.webp" class="w-full h-full" alt="توب كول للمكيفات">
+                    <img src="/assets/img/logo.webp" class="w-full h-full object-contain" alt="توب كول للمكيفات">
                 </div>
                 <div>
                     <h2 class="text-xl font-bold text-primary">توب كول للمكيفات</h2>
@@ -191,25 +223,25 @@
                 <!-- Dropdown -->
                 <div class="relative group">
                     <button
-                        class="text-black hover:text-secondary transition-colors font-medium flex items-center gap-1 focus:outline-none">
+                        class="text-black hover:text-secondary transition-colors font-medium flex items-center gap-1 focus:outline-none py-2">
                         الخدمات <span class="text-xs">▼</span>
                     </button>
                     <div
-                        class="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
+                        class="absolute right-0 mt-0 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
                         <a href="/ac-cleaning-and-washing-in-jeddah/"
-                            class="block px-4 py-2 text-sm text-dark hover:bg-primary/5 hover:text-secondary transition text-right">تنظيف
+                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-primary/5 hover:text-secondary transition text-right">تنظيف
                             وغسيل المكيفات</a>
                         <a href="/ac-removal-installation-jeddah/"
-                            class="block px-4 py-2 text-sm text-dark hover:bg-primary/5 hover:text-secondary transition border-t border-gray-50 text-right">فك
+                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-primary/5 hover:text-secondary transition border-t border-gray-50 text-right">فك
                             وتركيب المكيفات</a>
                         <a href="/ac-maintenance-repair-jeddah/"
-                            class="block px-4 py-2 text-sm text-dark hover:bg-primary/5 hover:text-secondary transition border-t border-gray-50 text-right">صيانة
+                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-primary/5 hover:text-secondary transition border-t border-gray-50 text-right">صيانة
                             وإصلاح المكيفات</a>
                     </div>
                 </div>
 
                 <a href="/blog/"
-                    class="text-black hover:text-secondary transition-colors font-medium font-bold text-secondary">المدونة</a>
+                    class="text-secondary font-bold hover:text-secondary transition-colors">المدونة</a>
                 <a href="/contact/" class="text-black hover:text-secondary transition-colors font-medium">تواصل معنا</a>
             </div>
 
@@ -217,10 +249,10 @@
                 <div class="text-right hidden md:block">
                     <a href="tel:0544516970"
                         class="inline-block bg-secondary text-white px-5 py-3 rounded-lg shadow-md hover:bg-secondaryDark transition-colors">
-                        <p class="text-sm">اتصل بنا</p>
+                        <p class="text-sm font-bold">اتصل بنا</p>
                     </a>
                 </div>
-                <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none"><i
+                <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none" aria-label="القائمة"><i
                         class="fas fa-bars text-2xl"></i></button>
             </div>
         </div>
@@ -235,10 +267,10 @@
                 <a href="/ac-maintenance-repair-jeddah/"
                     class="text-black hover:text-secondary transition-colors font-medium">صيانة وإصلاح المكيفات</a>
                 <a href="/blog/"
-                    class="text-black hover:text-secondary transition-colors font-medium font-bold text-secondary">المدونة</a>
+                    class="text-secondary font-bold">المدونة</a>
                 <a href="/contact/" class="text-black hover:text-secondary transition-colors font-medium">تواصل معنا</a>
                 <a href="tel:0544516970"
-                    class="inline-block bg-secondary text-white px-5 py-3 rounded-lg shadow-md hover:bg-secondaryDark transition-colors">اتصل
+                    class="inline-block bg-secondary text-white px-5 py-3 rounded-lg shadow-md hover:bg-secondaryDark transition-colors font-bold">اتصل
                     بنا</a>
             </div>
         </div>
@@ -262,7 +294,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="container mx-auto px-4 py-8 pt-[100px] max-w-6xl">
+    <main class="container mx-auto px-4 py-8 pt-[100px] max-w-6xl">
         <!-- Breadcrumbs -->
         <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6 bg-white py-2.5 px-4 rounded-full border border-gray-200/50 inline-flex shadow-sm"
             aria-label="Breadcrumb">
@@ -273,140 +305,225 @@
 
         <!-- Hero Section -->
         <div
-            class="hero-pattern rounded-2xl shadow-lg text-white p-8 md:p-12 mb-12 text-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-black opacity-20"></div>
+            class="hero-pattern rounded-3xl shadow-xl text-white p-8 md:p-14 mb-12 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-25"></div>
             <div class="relative z-10 max-w-3xl mx-auto">
-                <h1 class="text-3xl md:text-5xl font-bold mb-4">مدونة توب كول لنصائح وإرشادات التكييف</h1>
-                <p class="text-lg text-gray-200">دليلك الشامل للعناية بالمكيفات وصيانتها وتنظيفها في جدة. مقالات علمية
-                    ونصائح عملية من فنيي توب كول المحترفين.</p>
+                <span class="inline-block bg-secondary/20 text-secondary text-sm font-bold px-4 py-1.5 rounded-full mb-4 border border-secondary/30">
+                    <i class="fas fa-book-open ml-1"></i> مقالات فنية وإرشادات متخصصة
+                </span>
+                <h1 class="text-3xl md:text-5xl font-black mb-5 leading-tight tracking-tight">مدونة توب كول لنصائح وإرشادات التكييف</h1>
+                <p class="text-base md:text-lg text-gray-200 leading-relaxed">
+                    دليلك الشامل للعناية بالمكيفات وصيانتها وتنظيفها في جدة. مقالات علمية ونصائح عملية يقدمها لك نخبة من فنيي توب كول المعتمدين لمساعدتك في الحفاظ على برودة منزلك وكفاءة أجهزتك.
+                </p>
             </div>
         </div>
 
         <!-- Articles Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <!-- Article 1 (Active) -->
+
+            <!-- Card 1: تنظيف المكيفات -->
             <article
-                class="blog-card bg-white rounded-2xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="/assets/img/logo.webp" alt="كم مرة يجب تنظيف المكيف؟" class="w-full h-full object-cover">
-                    <span
-                        class="absolute top-4 right-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">نصائح
-                        تنظيف</span>
+                class="blog-card bg-white rounded-3xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100 group">
+                <div class="h-44 relative card-header-clean flex items-center justify-center">
+                    <span class="absolute top-4 right-4 bg-teal-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                        نصائح تنظيف
+                    </span>
+                    <div class="icon-box w-20 h-20 rounded-2xl bg-white shadow-sm flex items-center justify-center card-icon-clean text-4xl border">
+                        <i class="fas fa-broom"></i>
+                    </div>
                 </div>
                 <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3">
+                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3 font-medium">
                         <span><i class="far fa-calendar-alt ml-1"></i>15 يوليو 2026</span>
                         <span>•</span>
                         <span><i class="far fa-clock ml-1"></i>5 دقائق قراءة</span>
                     </div>
-                    <h2 class="text-xl font-bold text-primary mb-3 hover:text-secondary transition-colors">
+                    <h2 class="text-xl font-bold text-primary mb-3 hover:text-secondary transition-colors leading-snug">
                         <a href="/blog/how-often-should-ac-be-cleaned/">كل كم يحتاج المكيف إلى التنظيف؟ دليلك الشامل</a>
                     </h2>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
-                        تعرف على التوقيت المثالي لغسيل وتنظيف المكيف السبليت والشباك في جدة لتفادي تراكم الأتربة وضعف
-                        التبريد وزيادة استهلاك الكهرباء...
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+                        تعرف على التوقيت المثالي لغسيل وتنظيف المكيف السبليت والشباك في جدة لتفادي تراكم الأتربة وضعف التبريد وزيادة استهلاك الكهرباء...
                     </p>
                     <a href="/blog/how-often-should-ac-be-cleaned/"
-                        class="text-secondary font-bold hover:text-secondaryDark text-sm inline-flex items-center gap-1 group">
-                        اقرأ المقال كاملاً <span
-                            class="transform group-hover:-translate-x-1 transition-transform">←</span>
+                        class="text-secondary font-bold hover:text-secondaryDark text-sm inline-flex items-center gap-1.5 group/link mt-auto pt-3 border-t border-gray-50">
+                        اقرأ المقال كاملاً <span class="transform group-hover/link:-translate-x-1.5 transition-transform duration-200">←</span>
                     </a>
                 </div>
             </article>
 
-
-            <!-- Article 2 (Mock/Visual Card 1) -->
+            <!-- Card 2: أسباب المكيف لا يبرد -->
             <article
-                class="blog-card bg-white rounded-2xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100 opacity-90">
-                <div class="h-48 overflow-hidden relative bg-gray-100 flex items-center justify-center">
-                    <i class="fas fa-tools text-5xl text-gray-300"></i>
-                    <span
-                        class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full">مواسير
-                        نحاس</span>
-                </div>
-                <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3">
-                        <span><i class="far fa-calendar-alt ml-1"></i>10 يوليو 2026</span>
-                        <span>•</span>
-                        <span><i class="far fa-clock ml-1"></i>4 دقائق قراءة</span>
+                class="blog-card bg-white rounded-3xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100 group">
+                <div class="h-44 relative card-header-cooling flex items-center justify-center">
+                    <span class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                        تشخيص أعطال
+                    </span>
+                    <div class="icon-box w-20 h-20 rounded-2xl bg-white shadow-sm flex items-center justify-center card-icon-cooling text-4xl border">
+                        <i class="fas fa-snowflake"></i>
                     </div>
-                    <h2 class="text-xl font-bold text-primary mb-3">
-                        أفضل أنواع مواسير النحاس للمكيفات وكيفية اختيارها
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3 font-medium">
+                        <span><i class="far fa-calendar-alt ml-1"></i>10 أغسطس 2026</span>
+                        <span>•</span>
+                        <span><i class="far fa-clock ml-1"></i>8 دقائق قراءة</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-primary mb-3 hover:text-secondary transition-colors leading-snug">
+                        <a href="/blog/ac-not-cooling-causes/">أسباب المكيف لا يبرد رغم أنه يعمل – الأسباب والحلول</a>
                     </h2>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
-                        تعرف على أفضل أنواع مواسير النحاس المستخدمة في تركيب المكيفات، وأهم المواصفات التي يجب مراعاتها
-                        مثل السمك والجودة ومقاومة الضغط لضمان كفاءة التبريد وتقليل احتمالية تسرب الفريون...
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+                        دليل تشخيصي شامل يوضح أسباب خروج هواء عادي أو دافئ من المكيف، فحص الفلاتر، ونقص غاز الفريون، ومشاكل الضاغط والوحدة الخارجية...
                     </p>
-                    <a href="/blog/ac-copper-piping-types-best-brands/"
-                        class="text-secondary font-bold hover:text-secondaryDark text-sm inline-flex items-center gap-1 group">
-                        اقرأ المقال كاملاً <span
-                            class="transform group-hover:-translate-x-1 transition-transform">←</span>
+                    <a href="/blog/ac-not-cooling-causes/"
+                        class="text-secondary font-bold hover:text-secondaryDark text-sm inline-flex items-center gap-1.5 group/link mt-auto pt-3 border-t border-gray-50">
+                        اقرأ المقال كاملاً <span class="transform group-hover/link:-translate-x-1.5 transition-transform duration-200">←</span>
                     </a>
                 </div>
             </article>
 
-
-
-            <!-- Article 3 (Mock/Visual Card 2) -->
+            <!-- Card 3: أسباب تسريب الماء من المكيف -->
             <article
-                class="blog-card bg-white rounded-2xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100 opacity-90">
-                <div class="h-48 overflow-hidden relative bg-gray-100 flex items-center justify-center">
-                    <i class="fas fa-tools text-5xl text-gray-300"></i>
-                    <span
-                        class="absolute top-4 right-4 bg-orange-600 text-white text-xs font-bold px-3 py-1.5 rounded-full">دليل
-                        الاستخدام</span>
+                class="blog-card bg-white rounded-3xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100 group">
+                <div class="h-44 relative card-header-leak flex items-center justify-center">
+                    <span class="absolute top-4 right-4 bg-cyan-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                        صيانة الصرف
+                    </span>
+                    <div class="icon-box w-20 h-20 rounded-2xl bg-white shadow-sm flex items-center justify-center card-icon-leak text-4xl border">
+                        <i class="fas fa-droplet"></i>
+                    </div>
                 </div>
                 <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3">
-                        <span><i class="far fa-calendar-alt ml-1"></i>5 يوليو 2026</span>
+                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3 font-medium">
+                        <span><i class="far fa-calendar-alt ml-1"></i>20 أغسطس 2026</span>
                         <span>•</span>
                         <span><i class="far fa-clock ml-1"></i>6 دقائق قراءة</span>
                     </div>
-                    <h2 class="text-xl font-bold text-primary mb-3">
-                        طريقة تنظيف فلاتر المكيف السبلت بنفسك بالخطوات
+                    <h2 class="text-xl font-bold text-primary mb-3 hover:text-secondary transition-colors leading-snug">
+                        <a href="/blog/ac-water-leak-causes/">أسباب تسريب الماء من المكيف وحلولها الشاملة بجدة</a>
                     </h2>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
-                        خطوة بخطوة بالصور والفيديو، تعلم طريقة فك وغسيل فلاتر المكيف السبلت في منزلك لزيادة قوة دفع
-                        الهواء والتخلص من الروائح الكريهة...
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+                        لماذا يقطر المكيف ماء داخل الغرفة؟ أسباب انسداد أنبوب التصريف، تجمد الفريون، ميلان الوحدة، وطرق التسليك السريع لمنع تلف الجدران...
                     </p>
-                    <span class="text-gray-400 text-sm inline-flex items-center gap-1">
-                        قريباً في المدونة
-                    </span>
+                    <a href="/blog/ac-water-leak-causes/"
+                        class="text-secondary font-bold hover:text-secondaryDark text-sm inline-flex items-center gap-1.5 group/link mt-auto pt-3 border-t border-gray-50">
+                        اقرأ المقال كاملاً <span class="transform group-hover/link:-translate-x-1.5 transition-transform duration-200">←</span>
+                    </a>
                 </div>
             </article>
 
-            <!-- Article 4 (Active - الفرق بين المكيف الشباك والسبليت) -->
+            <!-- Card 4: مواسير النحاس للمكيفات -->
             <article
-                class="blog-card bg-white rounded-2xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100">
-                <div class="h-48 overflow-hidden relative bg-gray-100 flex items-center justify-center">
-                    <i class="fas fa-tools text-5xl text-gray-300"></i>
-                    <span
-                        class="absolute top-4 right-4 bg-orange-600 text-white text-xs font-bold px-3 py-1.5 rounded-full">مقارنة
-                        التكييف</span>
+                class="blog-card bg-white rounded-3xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100 group">
+                <div class="h-44 relative card-header-copper flex items-center justify-center">
+                    <span class="absolute top-4 right-4 bg-amber-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                        مواسير نحاس
+                    </span>
+                    <div class="icon-box w-20 h-20 rounded-2xl bg-white shadow-sm flex items-center justify-center card-icon-copper text-4xl border">
+                        <i class="fas fa-wrench"></i>
+                    </div>
                 </div>
                 <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3">
+                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3 font-medium">
+                        <span><i class="far fa-calendar-alt ml-1"></i>10 يوليو 2026</span>
+                        <span>•</span>
+                        <span><i class="far fa-clock ml-1"></i>7 دقائق قراءة</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-primary mb-3 hover:text-secondary transition-colors leading-snug">
+                        <a href="/blog/ac-copper-piping-types-best-brands/">أفضل أنواع مواسير النحاس للمكيفات وكيفية اختيارها</a>
+                    </h2>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+                        مقارنة بين مواسير النحاس الأمريكي والكوري والجنوب أفريقي، والمقاسات والسماكات المناسبة لضغط غاز التبريد لتحقيق أعلى كفاءة...
+                    </p>
+                    <a href="/blog/ac-copper-piping-types-best-brands/"
+                        class="text-secondary font-bold hover:text-secondaryDark text-sm inline-flex items-center gap-1.5 group/link mt-auto pt-3 border-t border-gray-50">
+                        اقرأ المقال كاملاً <span class="transform group-hover/link:-translate-x-1.5 transition-transform duration-200">←</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 5: الفرق بين المكيف الشباك والسبليت -->
+            <article
+                class="blog-card bg-white rounded-3xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100 group">
+                <div class="h-44 relative card-header-compare flex items-center justify-center">
+                    <span class="absolute top-4 right-4 bg-indigo-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                        مقارنة التكييف
+                    </span>
+                    <div class="icon-box w-20 h-20 rounded-2xl bg-white shadow-sm flex items-center justify-center card-icon-compare text-4xl border">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3 font-medium">
                         <span><i class="far fa-calendar-alt ml-1"></i>16 أغسطس 2026</span>
                         <span>•</span>
                         <span><i class="far fa-clock ml-1"></i>7 دقائق قراءة</span>
                     </div>
-                    <h2 class="text-xl font-bold text-primary mb-3 hover:text-secondary transition-colors">
-                        <a href="/blog/window-vs-split-ac-difference/">الفرق بين المكيف الشباك والسبليت – أيهما أفضل
-                            لمناخ جدة؟</a>
+                    <h2 class="text-xl font-bold text-primary mb-3 hover:text-secondary transition-colors leading-snug">
+                        <a href="/blog/window-vs-split-ac-difference/">الفرق بين المكيف الشباك والسبليت – أيهما أفضل لمناخ جدة؟</a>
                     </h2>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
-                        دليل شامل ومقارنة تفصيلية بين المكيف الشباك والسبليت من حيث كفاءة التبريد، استهلاك الكهرباء،
-                        مستوى الصوت، وتكاليف التركيب والصيانة...
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+                        دليل شامل ومقارنة تفصيلية بين المكيف الشباك والسبليت من حيث استهلاك الكهرباء، قوة التبريد، مستوى الضوضاء، وتكاليف الصيانة...
                     </p>
                     <a href="/blog/window-vs-split-ac-difference/"
-                        class="text-secondary font-bold hover:text-secondaryDark text-sm inline-flex items-center gap-1 group">
-                        اقرأ المقال كاملاً <span
-                            class="transform group-hover:-translate-x-1 transition-transform">←</span>
+                        class="text-secondary font-bold hover:text-secondaryDark text-sm inline-flex items-center gap-1.5 group/link mt-auto pt-3 border-t border-gray-50">
+                        اقرأ المقال كاملاً <span class="transform group-hover/link:-translate-x-1.5 transition-transform duration-200">←</span>
                     </a>
                 </div>
             </article>
+
+            <!-- Card 6: تنظيف فلاتر المكيف السبلت -->
+            <article
+                class="blog-card bg-white rounded-3xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100 group">
+                <div class="h-44 relative card-header-filter flex items-center justify-center">
+                    <span class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                        دليل إرشادي
+                    </span>
+                    <div class="icon-box w-20 h-20 rounded-2xl bg-white shadow-sm flex items-center justify-center card-icon-filter text-4xl border">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-3 font-medium">
+                        <span><i class="far fa-calendar-alt ml-1"></i>5 يوليو 2026</span>
+                        <span>•</span>
+                        <span><i class="far fa-clock ml-1"></i>6 دقائق قراءة</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-primary mb-3 hover:text-secondary transition-colors leading-snug">
+                        <a href="/blog/how-often-should-ac-be-cleaned/">طريقة تنظيف فلاتر المكيف السبلت بنفسك بالخطوات</a>
+                    </h2>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+                        تعلم خطوات فك وغسيل فلاتر المكيف السبلت في منزلك لزيادة قوة تدفق الهواء، وإزالة الروائح الكريهة وتوفير فاتورة الكهرباء الشهرية...
+                    </p>
+                    <a href="/blog/how-often-should-ac-be-cleaned/"
+                        class="text-secondary font-bold hover:text-secondaryDark text-sm inline-flex items-center gap-1.5 group/link mt-auto pt-3 border-t border-gray-50">
+                        اقرأ المقال كاملاً <span class="transform group-hover/link:-translate-x-1.5 transition-transform duration-200">←</span>
+                    </a>
+                </div>
+            </article>
+
         </div>
-    </div>
+
+        <!-- Consultation Banner -->
+        <div class="bg-gradient-to-r from-primary via-primaryLight to-primary rounded-3xl p-8 md:p-12 text-white text-center shadow-xl mb-12 relative overflow-hidden">
+            <div class="relative z-10 max-w-2xl mx-auto">
+                <div class="w-16 h-16 rounded-2xl bg-secondary/20 text-secondary text-3xl flex items-center justify-center mx-auto mb-4 border border-secondary/30">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold mb-3">هل تواجه مشكلة فنية في مكيفك بجدة؟</h3>
+                <p class="text-gray-300 text-sm md:text-base mb-6 leading-relaxed">
+                    فريق فنيي توب كول جاهز لتلبية طلبات الصيانة، التنظيف بالمضخة، وتعبئة الفريون لجميع أنواع المكيفات في كافة أحياء جدة بأسعار منافسة وضمان حقيقي.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="tel:0544516970" class="bg-secondary hover:bg-secondaryDark text-white font-bold px-7 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2">
+                        <i class="fas fa-phone-alt"></i> اتصل الآن: 0544516970
+                    </a>
+                    <a href="https://wa.me/966544516970" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold px-7 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> استشرنا عبر واتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer
@@ -418,7 +535,7 @@
                     <div class="flex items-center gap-3 mb-6">
                         <div
                             class="text-white w-[80px] h-auto rounded-xl flex items-center justify-center text-2xl font-bold shadow-lg">
-                            <img class="rounded-xl" src="../assets/img/logo.webp" alt="شعار توب كوول">
+                            <img class="rounded-xl" src="/assets/img/logo.webp" alt="شعار توب كوول">
                         </div>
                         <div>
                             <h2 class="text-2xl font-bold text-[#f59e0b]">توب كوول</h2>
@@ -431,17 +548,11 @@
                     </p>
                     <div class="flex gap-3">
                         <a href="#"
-                            class="social-icon bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"><i
+                            class="social-icon bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 w-10 h-10 rounded-full flex items-center justify-center text-white"><i
                                 class="fab fa-facebook-f"></i></a>
                         <a href="https://wa.me/966544516970"
-                            class="social-icon bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700"><i
+                            class="social-icon bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 w-10 h-10 rounded-full flex items-center justify-center text-white"><i
                                 class="fab fa-whatsapp"></i></a>
-                        <a href="#"
-                            class="social-icon bg-gradient-to-br from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#"
-                            class="social-icon bg-gradient-to-br from-red-500 to-red-600 hover:from-red-600 hover:to-red-700"><i
-                                class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
@@ -543,7 +654,7 @@
             <div class="border-t border-gray-700/50 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div>
-                        <p class="text-gray-400">© 2024 <span class="text-white font-semibold">توب كوول</span>. جميع
+                        <p class="text-gray-400">© 2026 <span class="text-white font-semibold">توب كوول</span>. جميع
                             الحقوق محفوظة.</p>
                     </div>
                     <div class="flex items-center gap-3">
