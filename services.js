@@ -9,7 +9,7 @@ const servicesLinks = [
     { name: "صيانة وتنظيف مكيفات سبليت بجدة", url: "/ac-split-maintenance-cleaning-jeddah/" },
     { name: "تركيب مكيفات شباك بجدة", url: "/window-ac-installation-jeddah/" },
     { name: "فني مكيفات بجدة", url: "/ac-technician-in-jeddah/" },
-    { name: "تأسيس مكيفات بجدة", url: "/ac-foundation-in-jeddah/" },
+    { name: "تأسيس مكيفات بجدة", url: "/ac-foundation-jeddah/" },
 ];
     
 document.addEventListener('DOMContentLoaded', () => {
