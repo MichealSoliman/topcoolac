@@ -1,0 +1,13 @@
+{
+  "name": "توب كوول للمكيفات بجدة",
+  "short_name": "توب كوول",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0EA5E9",
+  "icons": [
+    { "src": "/assets/img/logo.webp", "sizes": "512x512", "type": "image/webp" }
+  ]
+}
