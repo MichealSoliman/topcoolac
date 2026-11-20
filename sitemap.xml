@@ -6,7 +6,7 @@
     <!-- الرئيسية -->
     <url>
         <loc>https://topcoolac.com/</loc>
-        <lastmod>2026-11-17T10:00:00+03:00</lastmod>
+        <lastmod>2026-11-20T10:00:00+03:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -98,7 +98,7 @@
     <!-- صفحات الأحياء والتغطية -->
     <url>
         <loc>https://topcoolac.com/areas/</loc>
-        <lastmod>2026-10-01T10:00:00+03:00</lastmod>
+        <lastmod>2026-11-20T10:00:00+03:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -111,6 +111,36 @@
     <url>
         <loc>https://topcoolac.com/areas/al-salamah-ac-maintenance-jeddah/</loc>
         <lastmod>2026-11-17T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://topcoolac.com/areas/al-rawdah-ac-services-jeddah/</loc>
+        <lastmod>2026-11-20T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://topcoolac.com/areas/al-zahra-ac-services-jeddah/</loc>
+        <lastmod>2026-11-20T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://topcoolac.com/areas/al-naeem-ac-services-jeddah/</loc>
+        <lastmod>2026-11-20T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://topcoolac.com/areas/al-hamdaniyah-ac-services-jeddah/</loc>
+        <lastmod>2026-11-20T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://topcoolac.com/areas/al-samer-ac-services-jeddah/</loc>
+        <lastmod>2026-11-20T10:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
