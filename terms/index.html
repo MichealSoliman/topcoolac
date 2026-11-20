@@ -108,11 +108,7 @@
   <link rel="stylesheet" href="/assets/css/fonts.css">
   <link rel="stylesheet" href="/dist/output.css">
   <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <!-- GLightbox -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" />
   <style>
     body {
       font-family: 'Cairo', sans-serif;
@@ -220,13 +216,7 @@
       transition: width 0.1s;
     }
 
-    .swiper-pagination-bullet-active {
-      background: #0EA5E9 !important;
-    }
 
-    .glightbox-clean .gclose {
-      background: #0EA5E9;
-    }
 
     .service-icon {
       font-size: 2.5rem;
@@ -810,15 +800,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true, mirror: false });
-    // Swiper
-    new Swiper('.mySwiper', { loop: true, autoplay: { delay: 3000 }, pagination: { el: '.swiper-pagination' } });
-    // GLightbox
-    GLightbox({ selector: '.glightbox' });
     // Navbar scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
