@@ -486,6 +486,7 @@
         }
     </style>
     <link rel="stylesheet" href="/assets/css/all.min.css">
+    <script src="/assets/js/analytics.js" defer></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -737,7 +738,7 @@
 
                     <!-- Main Cover Image -->
                     <div class="mb-10 text-center">
-                        <img src="../assets/img/dismantling-and-installing-air-conditioners.webp" decoding="async"
+                        <img src="../assets/img/dismantling-and-installing-air-conditioners.webp" srcset="/assets/img/dismantling-and-installing-air-conditioners-480.webp 480w, /assets/img/dismantling-and-installing-air-conditioners-800.webp 800w, /assets/img/dismantling-and-installing-air-conditioners-1200.webp 1200w, /assets/img/dismantling-and-installing-air-conditioners.webp 1536w" sizes="(max-width: 1024px) 100vw, 800px" decoding="async"
                             fetchpriority="high" width="1200" height="480" alt="فني يجهز مكيف سبليت للفك والتركيب بجدة"
                             class="w-full max-h-[480px] object-cover rounded-2xl shadow-md mx-auto">
                         <p class="text-xs text-gray-500 mt-2">تنفيذ أعمال فك وتركيب المكيفات بجدة وفق معايير الأمان
@@ -804,7 +805,7 @@
                             <p>
                                 يمتلك فنيونا المعرفة والخبرة في التعامل مع الماركات العالمية مثل (LG, Gree, Samsung,
                                 Mitsubishi, Carrier, Daikin, Midea, Fuji, O General)، واتباع التعليمات المصنعية لكل
-                                جهاز، بما في ذلك التعامل مع مكيفات الانفرتر الحديثة. نقدم خدماتنا لـ <a
+                                جهاز، بما في ذلك التعامل مع مكيفات <a href="/blog/inverter-vs-regular-ac/" class="text-secondary font-bold hover:underline">الانفرتر</a> الحديثة. نقدم خدماتنا لـ <a
                                     href="https://topcoolac.com/ac-removal-installation-jeddah/"
                                     class="text-secondary font-bold hover:underline">فك وتركيب المكيفات بجدة</a> وفق
                                 متطلبات الموقع.
@@ -1048,9 +1049,15 @@
                                     المكيفات بجدة</a>.
                             </p>
                         </div>
-                    </section>full inline-block"></span>
-                    معلومات مفصلة حول فك وتركيب التكيفات
-                    </h2>
+                    </section>
+
+                    <!-- 7. معلومات مفصلة حول فك وتركيب المكيفات -->
+                    <section id="detailed-info" class="content-section mb-14">
+                        <h2
+                            class="text-2xl md:text-3xl font-bold text-primary mb-6 pb-3 border-b-2 border-secondary/30 flex items-center gap-3">
+                            <span class="w-3 h-8 bg-secondary rounded-full inline-block"></span>
+                            معلومات مفصلة حول فك وتركيب المكيفات
+                        </h2>
                     <div class="prose max-w-none text-gray-700 leading-loose space-y-4">
                         <p>
                             تختلف متطلبات الفك والتركيب بناءً على نوع نظام التكييف المستهدف، سواء كان مكيف سبليت جداري،
@@ -1269,8 +1276,8 @@
                                 التركيب، والاعتماد بدلاً من ذلك على خروج قليل من الغاز لطر الهواء (Purging Method). هذا
                                 الإجراء الخاطئ يترك نسبة من الرطوبة والأكسجين داخل الأنابيب، حيث تتفاعل الرطوبة مع زيت
                                 الكومبروسر لتكوين أحماض تآكلية تسبب حرق الملفات الكهربائية للضاغط على المدى القريب. نحن
-                                في <a href="https://topcoolac.com/" class="text-secondary font-bold hover:underline">فني
-                                    فك وتركيب مكيفات جدة توب كوول</a> نلتزم بالتفريغ التام باستخدام أجهزة الفاكيوم
+                                في فني
+                                    فك وتركيب مكيفات جدة توب كوول نلتزم بالتفريغ التام باستخدام أجهزة الفاكيوم
                                 الحديثة.
                             </p>
                             <p>
@@ -1531,7 +1538,7 @@
                                         <td class="text-gray-600">حبس الغاز والفاكيوم وفحص التشغيل</td>
                                     </tr>
                                     <tr>
-                                        <td class="font-bold">فك وتركيب مكيف شباك</td>
+                                        <td class="font-bold">فك و<a href="/window-ac-installation-jeddah/" class="text-secondary font-bold hover:underline">تركيب مكيف شباك</a></td>
                                         <td class="text-green-600 font-bold">حسب حالة الموقع</td>
                                         <td class="text-gray-700">حجم الفتحة والحاجة لإطار</td>
                                         <td class="text-gray-600">تثبيت محكم وعزل الفتحات</td>
@@ -1795,6 +1802,7 @@
                     </section>
 
                     <!-- Section 15: 15+ FAQs Accordion -->
+                    <p class="text-gray-700 leading-loose text-base mb-5">قد تحتاج أيضاً إلى خدمات مرتبطة: <a href="/ac-foundation-jeddah/" class="text-secondary font-bold hover:underline">تأسيس مكيفات بجدة</a> للمباني الجديدة قبل التشطيب.</p>
                     <section id="faq"
                         class="py-10 bg-gray-50 rounded-2xl content-section border border-gray-200 p-6 md:p-8">
                         <div class="container mx-auto">
@@ -2114,7 +2122,14 @@
                     <div>
                         <h3 class="font-bold text-primary">كم وحدة حرارية يحتاج مكيف غرفتك؟</h3>
                         <p class="text-gray-600 text-sm">جدول المساحات لمناخ جدة</p>
+                        <a href="/blog/inverter-vs-regular-ac/" class="p-5 bg-gray-50 rounded-xl border border-gray-200 flex items-center gap-4 hover:border-secondary transition">
+                    <i class="fas fa-book-open text-secondary text-2xl"></i>
+                    <div>
+                        <h3 class="font-bold text-primary">الفرق بين المكيف الانفرتر والعادي</h3>
+                        <p class="text-gray-600 text-sm">أيهما أنسب لبيتك في جدة؟</p>
                     </div>
+                </a>
+            </div>
                 </a>
                 <a href="/blog/window-vs-split-ac-difference/" class="p-5 bg-gray-50 rounded-xl border border-gray-200 flex items-center gap-4 hover:border-secondary transition">
                     <i class="fas fa-book-open text-secondary text-2xl"></i>

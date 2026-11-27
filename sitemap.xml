@@ -20,7 +20,7 @@
     </url>
     <url>
         <loc>https://topcoolac.com/contact/</loc>
-        <lastmod>2026-10-01T10:00:00+03:00</lastmod>
+        <lastmod>2026-11-27T10:00:00+03:00</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -28,7 +28,7 @@
     <!-- صفحة الخدمات الرئيسية -->
     <url>
         <loc>https://topcoolac.com/services/</loc>
-        <lastmod>2026-11-17T10:00:00+03:00</lastmod>
+        <lastmod>2026-11-27T10:00:00+03:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -148,13 +148,13 @@
     <!-- قسم المدونة والمقالات -->
     <url>
         <loc>https://topcoolac.com/blog/</loc>
-        <lastmod>2026-11-17T10:00:00+03:00</lastmod>
+        <lastmod>2026-11-27T10:00:00+03:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://topcoolac.com/blog/how-often-should-ac-be-cleaned/</loc>
-        <lastmod>2026-09-25T10:00:00+03:00</lastmod>
+        <lastmod>2026-11-27T10:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -216,6 +216,31 @@
     <url>
         <loc>https://topcoolac.com/blog/ac-btu-room-size/</loc>
         <lastmod>2026-11-17T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://topcoolac.com/blog/inverter-vs-regular-ac/</loc>
+        <lastmod>2026-11-27T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://topcoolac.com/blog/best-ac-temperature-save-electricity/</loc>
+        <lastmod>2026-11-27T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://topcoolac.com/blog/ac-compressor-failure-signs/</loc>
+        <lastmod>2026-11-27T10:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://topcoolac.com/blog/ac-maintenance-before-summer/</loc>
+        <lastmod>2026-11-27T10:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
